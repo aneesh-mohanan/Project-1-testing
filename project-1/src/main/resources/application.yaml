@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 7000
 #  servlet:
 #    context-path: /bears
 
@@ -13,10 +13,11 @@ spring:
   datasource:
     username: root
     password: P@ssword2022
-    url: jdbc:mysql://35.184.137.230:3306/Users
-  jpa:
-    hibernate:
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true
-
+    url: jdbc:mysql://db:3306/Users
+    driver-class-name: com.mysql.cj.jdbc.Driver
+jpa:
+  hibernate:
+    naming:
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    ddl-auto: update
+  show-sql: true
